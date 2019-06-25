@@ -4,21 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Student bio</title>
+    
 </head>
-<body>
-    <h1><b>Student Bio</b></h1>
-    <h2>Kendell</h1>
-    <img src="sample.png">
-    <p>My name is kendell , I like to eat hamburgers and code.<a href="www.google.com"> hi</a></p>
+<body onload = "startTimer()">
+    <h1 class="container" id="top"><b>Student Bio</b></h1>
+    <div class="container">
+        <div class="boxside">
+            <h2>Kendell</h1>
+                <img src="sample.png">
+        </div>
 
-    <h2>Contact Info</h2>
-    <ul>
-        <li>Email <a href="Kendell.Jeffrey@gmaill.com"> Kendell.Jeffrey@gmaill.com</a></li>
-        <li>Github <a href="https://github.com/KendellJeffrey"> My Git</a></li>
-        <li>Portfolio <a href="kendelljeffrey.com"> kendelljeffrey.com</a></li>
-    </ul>
+        <div class="boxside">
+            <p>My name is kendell , I like to eat hamburgers and code.<a href="www.google.com"> hi</a></p>
+        </div>
 
+        <div class="boxside">
+            <h2>Contact Info</h2>
+                <ul>
+                    <li>Email <a href="mailto:Kendell.Jeffrey@gmaill.com"> Kendell.Jeffrey@gmaill.com</a></li>
+                    <li>Github <a href="https://github.com/KendellJeffrey"> My Git</a></li>
+                    <li>Portfolio <a href="kendelljeffrey.com"> kendelljeffrey.com</a></li>
+                </ul>
+        </div>
+    </div>
+</div>
+    
+    
+
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("myHtml").innerHTML = images[x];
+        }
+    
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("myHtml").innerHTML = images[x];
+        }
+    
+        function startTimer() {
+            setInterval(displayNextImage, 250);
+        }
+    
+        var images = [], x = -1;
+        images[0] = "hi";
+        images[1] = "hi my";
+        images[2] = "hi my name";
+        images[3] = "hi my name is";
+        images[4] = "hi my name is kendell";
+    
+        
+    </script>
+    <h2 id="myHtml" ></h1>
+    
 
 </body>
 </html>
